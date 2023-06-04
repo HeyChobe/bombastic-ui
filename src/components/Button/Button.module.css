@@ -1,0 +1,24 @@
+.button {
+  border: 0;
+  padding: 1rem 1.2rem;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Background Color */
+.button[data-bg="primary"] {
+  background-color: blue;
+}
+.button[data-bg="secondary"] {
+  background-color: gray;
+}
+.button[data-bg="ok"] {
+  background-color: green;
+}
+.button[data-bg="cancel"] {
+  background-color: red;
+}
+.button[data-bg="warning"] {
+  background-color: yellow;
+}
