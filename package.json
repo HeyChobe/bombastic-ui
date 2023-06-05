@@ -10,7 +10,6 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "tsc",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build-lib": "rollup -c"
@@ -19,8 +18,16 @@
     "type": "git",
     "url": "git+https://github.com/HeyChobe/bombastic-ui.git"
   },
-  "author": "",
-  "license": "MIT",
+  "author": {
+    "name": "Bombastic Dev",
+    "contributors": [
+      "Carlos Cortez",
+      "Diana Umaña",
+      "Oscar Orellana",
+      "Mario Rodriguez"
+    ]
+  },
+  "license": "MIT license",
   "bugs": {
     "url": "https://github.com/HeyChobe/bombastic-ui/issues"
   },
@@ -43,8 +50,6 @@
     "@tsconfig/recommended": "^1.0.2",
     "@types/react": "^18.2.0",
     "autoprefixer": "^10.4.14",
-    "i": "^0.3.7",
-    "npm": "^9.6.5",
     "prop-types": "^15.8.1",
     "rollup": "^2.79.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
