@@ -18,8 +18,16 @@
     "type": "git",
     "url": "git+https://github.com/HeyChobe/bombastic-ui.git"
   },
-  "author": "",
-  "license": "MIT",
+  "author": {
+    "name": "Bombastic Dev",
+    "contributors": [
+      "Carlos Cortez",
+      "Diana Umaña",
+      "Oscar Orellana",
+      "Mario Rodriguez"
+    ]
+  },
+  "license": "MIT license",
   "bugs": {
     "url": "https://github.com/HeyChobe/bombastic-ui/issues"
   },
