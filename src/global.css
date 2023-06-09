@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Tilt+Warp&display=swap");
+
+:root {
+  --blue: #4096ff;
+  --grey: #f5f5f5;
+  --grey2: #9db2bf;
+  --disabled: #cccccc;
+  --green: #4caf50;
+  --red: #f44336;
+  --yellow: #eae509;
+  --white: #fcfcfc;
+  --black: #1d2121;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+}

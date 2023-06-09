@@ -4,47 +4,59 @@ import { Button } from "../components/Button";
 const meta: Meta<typeof Button> = {
   title: "Button",
   component: Button,
+  argTypes: {
+    label: {
+      control: "text",
+    },
+    ghost: {
+      control: "boolean",
+    },
+    small: {
+      control: "boolean",
+    },
+    disabled: {
+      control: "boolean",
+    },
+  },
 };
 
 export default meta;
+
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
-  render: () => (
-    <Button bg="primary" label="Primary" onClick={() => console.log("hola")} />
-  ),
+export const Basic: Story = {
+  render: (args) => {
+    return <Button {...args} />;
+  },
+  argTypes: {
+    bg: {
+      options: ["primary", "secondary", "ok", "cancel", "warning"],
+      control: "radio",
+    },
+  },
+  args: {
+    bg: "primary",
+    label: "Basic Button",
+    onClick: () => {
+      console.log("click");
+    },
+  },
 };
 
-export const Secondary: Story = {
-  render: () => (
-    <Button
-      bg="secondary"
-      label="Secondary"
-      onClick={() => console.log("hola")}
-    />
-  ),
-};
-
-export const Ok: Story = {
-  render: () => (
-    <Button bg="ok" label="Success" onClick={() => console.log("hola")} />
-  ),
-};
-
-export const Cancel: Story = {
-  render: () => (
-    <Button bg="cancel" label="Cancel" onClick={() => console.log("hola")} />
-  ),
-};
-
-export const Warning: Story = {
-  render: () => (
-    <Button bg="warning" label="Warning" onClick={() => console.log("hola")} />
-  ),
-};
-
-export const CustomColor: Story = {
-  render: () => (
-    <Button bg="#111111" label="Warning" onClick={() => console.log("hola")} />
-  ),
+export const Custom: Story = {
+  render: (args) => {
+    return <Button {...args} />;
+  },
+  argTypes: {
+    bg: {
+      control: "color",
+    },
+  },
+  args: {
+    bg: "primary",
+    label: "Custom Button",
+    onClick: () => {
+      console.log("click");
+    },
+  },
 };

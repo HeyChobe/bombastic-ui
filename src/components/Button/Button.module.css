@@ -1,24 +1,65 @@
 .button {
   border: 0;
-  padding: 1rem 1.2rem;
-  border-radius: 15px;
-  color: white;
+  padding: 0.7rem 1.1rem;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 400;
+  color: white;
+  font-size: 1rem;
+  transition: ease-in-out 0.2s;
+}
+.button[data-small="true"] {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.button[data-ghost="true"]:hover {
+  opacity: 0.7;
 }
 
 /* Background Color */
 .button[data-bg="primary"] {
-  background-color: blue;
+  background-color: var(--blue);
 }
 .button[data-bg="secondary"] {
-  background-color: gray;
+  background-color: var(--grey2);
+  color: var(--white);
 }
 .button[data-bg="ok"] {
-  background-color: green;
+  background-color: var(--green);
 }
 .button[data-bg="cancel"] {
-  background-color: red;
+  background-color: var(--red);
 }
 .button[data-bg="warning"] {
-  background-color: yellow;
+  background-color: var(--yellow);
+}
+
+/* Ghost */
+.button[data-bg="primary"].button[data-ghost="true"] {
+  background-color: transparent;
+  border: 1.2px solid var(--blue);
+  color: var(--blue);
+}
+.button[data-bg="secondary"].button[data-ghost="true"] {
+  background-color: transparent;
+  border: 1.2px solid var(--grey2);
+  color: var(--grey2);
+}
+.button[data-bg="ok"].button[data-ghost="true"] {
+  background-color: transparent;
+  border: 1.2px solid var(--green);
+  color: var(--green);
+}
+.button[data-bg="cancel"].button[data-ghost="true"] {
+  background-color: transparent;
+  border: 1.2px solid var(--red);
+  color: var(--red);
+}
+.button[data-bg="warning"].button[data-ghost="true"] {
+  background-color: transparent;
+  border: 1.2px solid var(--yellow);
+  color: var(--yellow);
 }

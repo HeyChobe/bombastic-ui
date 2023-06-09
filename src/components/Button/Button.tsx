@@ -12,21 +12,48 @@ export interface Props {
   label: string;
   onClick: () => void;
   bg?: string;
+  ghost?: boolean;
+  small?: boolean;
+  disabled?: boolean;
 }
 
-export default function Button({ label, onClick, bg = "primary" }: Props) {
-  if (!Object.values(options).includes(bg))
-    return (
-      <button
-        className={styles.button}
-        style={{ backgroundColor: bg }}
-        onClick={onClick}
-      >
-        {label}
-      </button>
-    );
+export default function Button({
+  label,
+  onClick,
+  bg = "primary",
+  ghost = false,
+  small = false,
+  disabled = false,
+}: Props) {
+  const isCustomColor = !Object.values(options).includes(bg);
+
+  const buttonStyle = {
+    backgroundColor: isCustomColor ? bg : undefined,
+  };
+
+  const disabledStyle = {
+    backgroundColor: "var(--disabled)",
+    border: "1.2px solid var(--grey2)",
+    color: "var(--white)",
+    cursor: "not-allowed",
+  };
+
+  const ghostStyle = {
+    backgroundColor: "transparent",
+    color: bg,
+    border: `1.2px solid ${bg}`,
+  };
+
   return (
-    <button data-bg={bg} className={styles.button} onClick={onClick}>
+    <button
+      style={disabled ? disabledStyle : ghost ? ghostStyle : buttonStyle}
+      className={styles.button}
+      data-small={small}
+      data-ghost={ghost}
+      data-bg={bg}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {label}
     </button>
   );
