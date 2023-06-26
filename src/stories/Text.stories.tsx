@@ -1,63 +1,57 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "../components/Button";
+import { Text } from "../components/Text";
 import React from "react";
 
-const meta: Meta<typeof Button> = {
-  title: "Button",
-  component: Button,
+const meta: Meta<typeof Text> = {
+  title: "Text",
+  component: Text,
   argTypes: {
     label: {
       control: "text",
     },
-    ghost: {
+    italic: {
       control: "boolean",
     },
-    small: {
+    underlined: {
       control: "boolean",
     },
-    disabled: {
+    strong: {
       control: "boolean",
+    },
+    size: {
+      options: [1, 2, 3],
+      control: "radio",
+    },
+    mode: {
+      options: ["left", "right", "center", "justify"],
+      control: "radio",
     },
   },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Text>;
 
 export const Basic: Story = {
   render: (args) => {
-    return <Button {...args} />;
+    return <Text {...args} />;
   },
   argTypes: {
-    bg: {
+    color: {
       options: ["primary", "secondary", "ok", "cancel", "warning"],
       control: "radio",
-    },
-  },
-  args: {
-    bg: "primary",
-    label: "Basic Button",
-    onClick: () => {
-      console.log("click");
     },
   },
 };
 
 export const Custom: Story = {
   render: (args) => {
-    return <Button {...args} />;
+    return <Text {...args} />;
   },
   argTypes: {
-    bg: {
+    color: {
       control: "color",
-    },
-  },
-  args: {
-    bg: "primary",
-    label: "Custom Button",
-    onClick: () => {
-      console.log("click");
     },
   },
 };
