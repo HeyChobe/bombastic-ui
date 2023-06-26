@@ -1,6 +1,8 @@
 import styles from "./Title.module.css";
 
-const options = {
+const modeOptions = ["left", "right", "center", "justify"];
+
+const bgOptions = {
   PRIMARY: "primary",
   SECONDARY: "secondary",
   OK: "ok",
@@ -16,6 +18,7 @@ interface TitleProps {
   onClick?: (event: any) => void;
   color?: string;
   strong?: boolean;
+  mode?: string;
 }
 
 export default function Title({
@@ -26,17 +29,21 @@ export default function Title({
   onClick,
   color = "primary",
   strong = true,
+  mode = "left",
 }: TitleProps) {
-  const isCustomColor = !Object.values(options).includes(color);
+  const isCustomColor = !Object.values(bgOptions).includes(color);
 
   const colorStyle = {
     color: isCustomColor ? color : undefined,
   };
 
+  const modeSelected = modeOptions.includes(mode) ? mode : "left";
+
   if (h <= 1)
     return (
       <h1
         style={colorStyle}
+        data-mode={modeSelected}
         data-color={color}
         data-italic={italic}
         data-strong={strong}
@@ -51,6 +58,7 @@ export default function Title({
     return (
       <h2
         style={colorStyle}
+        data-mode={modeSelected}
         data-color={color}
         data-italic={italic}
         data-strong={strong}
@@ -65,6 +73,7 @@ export default function Title({
     return (
       <h3
         style={colorStyle}
+        data-mode={modeSelected}
         data-color={color}
         data-italic={italic}
         data-strong={strong}
@@ -79,6 +88,7 @@ export default function Title({
     return (
       <h4
         style={colorStyle}
+        data-mode={modeSelected}
         data-color={color}
         data-italic={italic}
         data-strong={strong}
@@ -93,6 +103,7 @@ export default function Title({
     return (
       <h5
         style={colorStyle}
+        data-mode={modeSelected}
         data-color={color}
         data-italic={italic}
         data-strong={strong}
@@ -106,6 +117,7 @@ export default function Title({
   return (
     <h6
       style={colorStyle}
+      data-mode={modeSelected}
       data-color={color}
       data-italic={italic}
       data-strong={strong}

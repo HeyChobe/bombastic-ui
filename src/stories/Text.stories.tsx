@@ -1,14 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Title } from "../components/Title";
+import { Text } from "../components/Text";
 import React from "react";
 
-const meta: Meta<typeof Title> = {
-  title: "Title",
-  component: Title,
+const meta: Meta<typeof Text> = {
+  title: "Text",
+  component: Text,
   argTypes: {
-    h: {
-      control: "number",
-    },
     label: {
       control: "text",
     },
@@ -21,6 +18,10 @@ const meta: Meta<typeof Title> = {
     strong: {
       control: "boolean",
     },
+    size: {
+      options: [1, 2, 3],
+      control: "radio",
+    },
     mode: {
       options: ["left", "right", "center", "justify"],
       control: "radio",
@@ -30,11 +31,11 @@ const meta: Meta<typeof Title> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Title>;
+type Story = StoryObj<typeof Text>;
 
 export const Basic: Story = {
   render: (args) => {
-    return <Title {...args} />;
+    return <Text {...args} />;
   },
   argTypes: {
     color: {
@@ -46,7 +47,7 @@ export const Basic: Story = {
 
 export const Custom: Story = {
   render: (args) => {
-    return <Title {...args} />;
+    return <Text {...args} />;
   },
   argTypes: {
     color: {

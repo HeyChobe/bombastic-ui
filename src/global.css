@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Tilt+Warp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@100;300;400;500&display=swap");
 
 :root {
   --blue: #4096ff;
@@ -13,16 +13,14 @@
   --black: #1d2121;
 }
 
-button {
-  font-family: "Roboto", sans-serif;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+h6,
+a,
+p,
+button {
+  font-family: "Raleway", sans-serif;
 }

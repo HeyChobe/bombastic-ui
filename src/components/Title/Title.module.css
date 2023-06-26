@@ -1,24 +1,27 @@
 .title {
+  width: 100%;
+  height: auto;
   margin: 0.5rem 0;
+  font-weight: 600;
 }
 
 .h1 {
-  font-size: 3rem;
-}
-.h2 {
   font-size: 2.8rem;
 }
-.h3 {
+.h2 {
   font-size: 2.6rem;
 }
-.h4 {
+.h3 {
   font-size: 2.4rem;
 }
-.h5 {
+.h4 {
   font-size: 2.2rem;
 }
-.h6 {
+.h5 {
   font-size: 2rem;
+}
+.h6 {
+  font-size: 1.8rem;
 }
 
 /* Italic */
@@ -51,4 +54,18 @@
 }
 .title[data-color="warning"] {
   color: var(--yellow);
+}
+
+/* Mode */
+.title[data-mode="left"] {
+  text-align: left;
+}
+.title[data-mode="right"] {
+  text-align: right;
+}
+.title[data-mode="center"] {
+  text-align: center;
+}
+.title[data-mode="justify"] {
+  text-align: justify;
 }
