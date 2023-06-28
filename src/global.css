@@ -24,3 +24,10 @@ p,
 button {
   font-family: "Raleway", sans-serif;
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
