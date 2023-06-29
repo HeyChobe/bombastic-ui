@@ -41,3 +41,24 @@ import { Title } from "bombastic-ui";
 |    mode    |             Text position             |        string        |  "left"   |                  "left"\|"right"\|"center"\|"justify"                   |
 |   color    |              Font color               | string\|color inputs | "primary" | "primary"\|"secondary"\|"ok"\|"cancel"\|"warning"\|hex color\|rgb color |
 |  onClick   |   Event handler for onClick action    |       function       | (e)=>void |                                functions                                |
+
+# Input Text
+
+```javascript
+import { InputText } from "bombastic-ui";
+import { useState } from "react";
+
+export default function MyPage() {
+  const [value, setValue] = useState("");
+
+  return (
+    <InputText
+      placeholder="hola"
+      value={value}
+      color="green"
+      labelColor="red"
+      onChange={(e) => setValue(e.target.value)}
+    />
+  );
+}
+```

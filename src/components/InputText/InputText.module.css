@@ -1,0 +1,96 @@
+.input-group {
+  position: relative;
+  margin: 1.5rem 0;
+  width: 100%;
+  min-width: 200px;
+}
+
+.input {
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 12px;
+  background: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  width: 100%;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "Raleway", sans-serif;
+}
+
+.input:disabled {
+  cursor: not-allowed;
+  background-color: var(--grey);
+}
+
+.user-label {
+  position: absolute;
+  left: 15px;
+  color: var(--grey2);
+  pointer-events: none;
+  transform: translateY(1rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  top: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.input:focus {
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.input:focus ~ label {
+  transform: translateY(-50%) scale(0.95);
+  background-color: Window;
+  padding: 0 0.2em;
+}
+
+.input:valid {
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.input:valid ~ label {
+  transform: translateY(-50%) scale(0.95);
+  background-color: Window;
+  padding: 0 0.2em;
+}
+
+/* Color */
+.input[data-color="primary"] {
+  border-color: var(--blue);
+}
+.input[data-color="secondary"] {
+  border-color: var(--grey2);
+}
+.input[data-color="ok"] {
+  border-color: var(--green);
+}
+.input[data-color="cancel"] {
+  border-color: var(--red);
+}
+.input[data-color="warning"] {
+  border-color: var(--yellow);
+}
+.input[data-label-color="dark"] {
+  color: var(--black);
+}
+.input[data-label-color="light"] {
+  color: var(--white);
+}
+.user-label[data-color="dark"] {
+  color: var(--blue);
+}
+.user-label[data-color="light"] {
+  color: var(--grey2);
+}
+.user-label[data-color="ok"] {
+  color: var(--green);
+}
+.user-label[data-color="cancel"] {
+  color: var(--red);
+}
+.user-label[data-color="warning"] {
+  color: var(--yellow);
+}
