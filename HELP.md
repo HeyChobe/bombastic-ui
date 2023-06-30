@@ -62,3 +62,17 @@ export default function MyPage() {
   );
 }
 ```
+
+# Accordion
+
+```javascript
+import { Accordion } from "bombastic-ui";
+
+<Accordion
+  title={"HOla"}
+  description={
+    "asdf ashdfkj sdjfkh skdjf lfkjashdfjk shdkjfhsdkj skdfjhs djsfsdk  s d fdf sd skdjf"
+  }
+  bg="light"
+/>;
+```
