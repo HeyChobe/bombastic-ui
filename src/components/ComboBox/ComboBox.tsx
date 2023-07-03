@@ -16,8 +16,8 @@ interface Props {
 }
 
 const defaultOptions = [
-  { label: "Option 1", value: "hola1" },
-  { label: "Option 2", value: "hola2" },
+  { label: "Option 1", value: 1 },
+  { label: "Option 2", value: 2 },
 ];
 
 export default function ComboBox({
