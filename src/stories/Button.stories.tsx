@@ -56,8 +56,5 @@ export const Custom: Story = {
   args: {
     bg: "primary",
     label: "Custom Button",
-    onClick: () => {
-      console.log("click");
-    },
   },
 };

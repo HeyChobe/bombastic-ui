@@ -76,3 +76,37 @@ import { Accordion } from "bombastic-ui";
   bg="light"
 />;
 ```
+
+# ComboBox
+
+```javascript
+
+import { ComboBox } from "bombastic-ui";
+import { useState } from "react";
+
+const options = [
+  { label: "pizza", value: 1 },
+  { label: "hamburger", value: "hamburger" },
+  { label: "tacos", value: "tacos" },
+];
+
+export default function MyPage(){
+    const [comboBoxValue, setComboBoxValue] = useState("")
+
+    return(
+        ...
+        <ComboBox theme="light" options={options} onChange={setComboBoxValue} />
+        ...
+    )
+```
+
+## Allowed Properties
+
+|     Prop     |                                                                                              Description                                                                                              |                        Type                         |                       Default                        |                   Allowed Inputs                    |
+| :----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------: | :--------------------------------------------------: | :-------------------------------------------------: |
+|    theme     |                                                                                    Default options colors provided                                                                                    |                       string                        |                        "dark"                        |                   "dark"\|"light"                   |
+|  themeColor  |                                                                   Overwrite the default colors provided to make a custom component                                                                    |                       string                        |                          ""                          |                hexColors\|rgbColors                 |
+| placeholder  |                                                                           Placeholder text to identify the custom combobox                                                                            |                       string                        |                  "Select an option"                  |                       strings                       |
+| labelBgColor | When the placeholder is focus, it moves to the top of the input to act like a label. This property changes the background color to make a transparent effect between the borders and background page. |                       string                        |                          ""                          |                hexColors\|regColors                 |
+|   options    |                                                                            Labels and values to select inside the combobox                                                                            |  Array of {label: string, value: string \| number}  | [{label: "Option 1", value: 1}, {label: "Option 2"}] |  Array of {label: string, value: string \| number}  |
+|   onChange   |                                                                              Function to use the setStateAction dispatch                                                                              | Dispatch<SetStateAction<string\|number\|undefined>> |                          -                           | Dispatch<SetStateAction<string\|number\|undefined>> |
