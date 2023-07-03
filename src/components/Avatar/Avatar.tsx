@@ -24,8 +24,8 @@ interface AvatarProps {
 }
 
 export default function Avatar({
-  alt,
-  src,
+  alt = "",
+  src = "",
   pointer = false,
   width = "100px",
   height = "100px",
@@ -62,7 +62,9 @@ export default function Avatar({
       }}
       className={styles.letter}
     >
-      {letter.toUpperCase()}
+      {letter.length <= 2
+        ? letter.toUpperCase()
+        : letter.slice(0, 2).toUpperCase()}
     </span>
   );
 }
