@@ -14,12 +14,14 @@ import { Button } from "bombastic-ui";
 
 ## Allowed Properties
 
-- **_bg_** = primary | secondary | ok | cancel | warning | hex-color (#000000) : _string_
-- **_label_** : _string_
-- **_onClick_** : _() => void_
-- **_ghost_** : _boolean_
-- **_disabled_** : _boolean_
-- **_small_** : _boolean_
+| Prop     	| Description                                               	| Type     	| Default                           	| Allowed Inputs                                      	|
+|----------	|-----------------------------------------------------------	|----------	|-----------------------------------	|-----------------------------------------------------	|
+| bg       	| Property that changes button background color             	| string   	| "primary"                         	| ["primary", "secondary", "ok", "cancel", "warning"] 	|
+| label    	| String content of the  Button component                   	| string   	| "button"                          	| any string                                          	|
+| onClick  	| Propert that gives the button an action                   	| function 	| console.warn("No event provided") 	| functions                                           	|
+| ghost    	| Property that adjust the visibility of the Button element 	| boolean  	| false                             	| [true, false]                                       	|
+| disabled 	| Property that shows if Button component can be used       	| boolean  	| false                             	| [true, false]                                       	|
+| small    	| Property that adjust the size of the Button               	| boolean  	| false                             	| [true, false]                                       	|
 
 # Title
 
