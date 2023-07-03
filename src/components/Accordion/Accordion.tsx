@@ -57,9 +57,9 @@ export default function Accordion({
           <path
             d="M7 10L12 15L17 10"
             stroke={bg !== "light" ? "var(--grey)" : "var(--black)"}
-            stroke-width="1.3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </div>
