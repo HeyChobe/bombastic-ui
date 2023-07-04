@@ -22,7 +22,11 @@ h6,
 a,
 p,
 button,
-span {
+span,
+select,
+option,
+label,
+li {
   font-family: "Raleway", sans-serif;
 }
 
@@ -33,48 +37,8 @@ button:focus {
   outline: none;
 }
 
-/* @keyframes dropDown { */
-/*   0% { */
-/*     height: 0; */
-/*     visibility: hidden; */
-/*   } */
-/*   25% { */
-/*     height: 25%; */
-/*     visibility: visible; */
-/*   } */
-/*   50% { */
-/*     height: 50%; */
-/*     visibility: visible; */
-/*   } */
-/*   70% { */
-/*     height: 75%; */
-/*     visibility: visible; */
-/*   } */
-/*   100% { */
-/*     height: 100%; */
-/*     visibility: visible; */
-/*   } */
-/* } */
-
-/* @keyframes dropUp { */
-/*   0% { */
-/*     height: 100%; */
-/*     visibility: visible; */
-/*   } */
-/*   25% { */
-/*     height: 75%; */
-/*     visibility: visible; */
-/*   } */
-/*   50% { */
-/*     height: 50%; */
-/*     visibility: visible; */
-/*   } */
-/*   70% { */
-/*     height: 25%; */
-/*     visibility: visible; */
-/*   } */
-/*   100% { */
-/*     height: 0; */
-/*     visibility: hidden; */
-/*   } */
-/* } */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
