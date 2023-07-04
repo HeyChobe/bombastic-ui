@@ -64,6 +64,16 @@ export default function MyPage() {
   );
 }
 ```
+## Allowed Properties
+
+| Prop        	| Description                                                	| Type     	| Default          	| Allowed Inputs                                      	|
+|-------------	|------------------------------------------------------------	|----------	|------------------	|-----------------------------------------------------	|
+| placeholder 	| Property that holds a text to show before typing something 	| String   	| "Type something" 	| Any strings                                         	|
+| onChange    	| Event handler for onChange actions                         	| Function 	| void             	| Functions                                           	|
+| value       	| Property that contains the text that will go in the input  	| any      	|        ""        	| Any                                                 	|
+| color       	| Property that changes the color of text                    	| string   	| "primary"        	| ["primary", "secondary", "ok", "cancel", "warning"] 	|
+| disabled    	| Property that shows if component can be shown              	| boolean  	| "false"          	| ["true","false"]                                    	|
+| labelColor  	| Prperty that changes text input text color                 	| string   	| "dark"           	| ["dark", "light"]                                   	|
 
 # Accordion
 
