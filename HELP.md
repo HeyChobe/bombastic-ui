@@ -152,3 +152,11 @@ import { ImageCard } from "bombastic-ui";
   theme="light"
 />;
 ```
+
+# ProgressBar
+
+```javascript
+import { ProgressBar } from "bombastic-ui";
+
+<ProgressBar width="76%" bgColor="green" />;
+```
