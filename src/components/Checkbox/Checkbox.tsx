@@ -27,18 +27,16 @@ export default function Checkbox({
   const isCustomColor = !Object.values(bgOptions).includes(color);
 
   return (
-    <>
-      <input
-        type="checkbox"
-        className={styles}
-        style={isCustomColor ? { "--current-color": color } : undefined}
-        data-color={color}
-        data-ghost={ghost}
-        checked={checked}
-        disabled={disabled}
-        onChange={onChange}
-        required
-      />
-    </>
+    <input
+      type="checkbox"
+      className={styles}
+      style={isCustomColor ? { "--current-color": color } : undefined}
+      data-color={color}
+      data-ghost={ghost}
+      checked={checked}
+      disabled={disabled}
+      onChange={onChange}
+      required
+    />
   );
 }
