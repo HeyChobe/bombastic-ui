@@ -18,10 +18,6 @@ input[type="checkbox"][data-color="warning"] {
   --current-color: var(--yellow);
 }
 
-input[type="checkbox"][data-color-custom="true"] {
-  --current-color: "data-color";
-}
-
 /* I would like the box-shadow has the same color of the previous element background-color */
 input[type="checkbox"][data-ghost="true"]::before {
   box-shadow: inset 1em 1em black; 
