@@ -1,0 +1,75 @@
+body {
+  --current-color: white;
+}
+
+input[type="checkbox"][data-color="primary"] {
+  --current-color: var(--blue)
+}
+input[type="checkbox"][data-color="secondary"] {
+  --current-color: var(--grey2);
+}
+input[type="checkbox"][data-color="ok"] {
+  --current-color: var(--green);
+}
+input[type="checkbox"][data-color="cancel"] {
+  --current-color: var(--red);
+}
+input[type="checkbox"][data-color="warning"] {
+  --current-color: var(--yellow);
+}
+
+input[type="checkbox"][data-color-custom="true"] {
+  --current-color: "data-color";
+}
+
+/* I would like the box-shadow has the same color of the previous element background-color */
+input[type="checkbox"][data-ghost="true"]::before {
+  box-shadow: inset 1em 1em black; 
+}
+
+input[type="checkbox"][data-ghost="true"] {
+  border: 0.15em solid transparent;
+  background-color: var(--current-color);
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  border: 0.15em solid var(--current-color);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: center center;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--current-color);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:disabled {
+  --current-color: #959495;
+  color: var(--current-color);
+  cursor: not-allowed;
+}
+
+/* input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+} */
