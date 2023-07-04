@@ -21,6 +21,28 @@ import { Button } from "bombastic-ui";
 - **_disabled_** : _boolean_
 - **_small_** : _boolean_
 
+# Checkbox
+
+```javascript
+import { Checkbox } from "bombastic-ui";
+
+<Checkbox
+  checked={valueState}
+  disabled={false}
+  ghost={false}
+  color="primary"
+  onClick={() => setValueState(!valueState)}
+/>;
+```
+
+## Allowed Properties
+
+- **_checked_** = _boolean_
+- **_disabled_** : _boolean_
+- **_ghost_** : _boolean_
+- **_color_** : primary | secondary | ok | cancel | warning | hex-color (#000000) : _string_
+- **_onChange_** : _() => void_
+
 # Title
 
 ```javascript
@@ -160,6 +182,28 @@ import { ProgressBar } from "bombastic-ui";
 
 <ProgressBar width="76%" bgColor="green" />;
 ```
+
+# Rating
+
+```javascript
+import { Rating } from "bombastic-ui";
+
+<Rating
+  color="warning"
+  disabled={false}
+  readonly={false}
+  value= {valueState}
+  onClick={(e) => setValueState(e.value)}
+/>;
+```
+
+## Allowed Properties
+
+- **_color_** : primary | secondary | ok | cancel | warning | hex-color (#000000) : _string_
+- **_readonly_** = _boolean_
+- **_disabled_** : _boolean_
+- **_value_** : _any_
+- **_onChange_** : _(e: any) => void_
 
 # Pagination
 
