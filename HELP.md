@@ -88,3 +88,5 @@ import { Accordion } from "bombastic-ui";
   bg="light"
 />;
 ```
+## Allowed Properties
+
