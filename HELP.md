@@ -160,3 +160,21 @@ import { ProgressBar } from "bombastic-ui";
 
 <ProgressBar width="76%" bgColor="green" />;
 ```
+
+# Pagination
+
+```javascript
+import { Pagination } from "bombastic-ui";
+import {useState} from "react"
+
+export default function MyPage() {
+
+    const [pagination, setPagination] = useState("")
+
+    return(
+    ...
+    <Pagination total={10} onChange={setPagination} page={pagination} />;
+    ...
+    )
+}
+```
