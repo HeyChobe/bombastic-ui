@@ -46,6 +46,7 @@ input[type="checkbox"] {
   display: grid;
   place-content: center;
   border: 0.15em solid var(--current-color);
+  cursor: pointer;
 }
 
 input[type="checkbox"]::before {
