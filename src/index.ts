@@ -6,4 +6,5 @@ export * from "./components/Accordion";
 export * from "./components/ComboBox";
 export * from "./components/Avatar";
 export * from "./components/ImageCard";
+export * from "./components/ProgressBar";
 import "./global.css";
