@@ -137,3 +137,18 @@ import { Avatar } from "bombastic-ui";
 | height  |                 Height of the circle                 | string  | "100px" |       strings        |
 | letter  | Letter that appears when Avatar exists without image | string  |    -    |       strings        |
 | bgColor |  Background Color for Avatar component with letters  | string  |    -    | hexColors\|rgbColors |
+
+# ImageCard
+
+```javascript
+import { ImageCard } from "bombastic-ui";
+
+<ImageCard
+  title="Titulo"
+  text="Este es mi texto, la verdad super chivo"
+  titleButton="Ver mas"
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHZAq08u4YaR0Jsu2CgeptdxC74y-9QEeFYEAb6YHP&s"
+  alt="alt image"
+  theme="light"
+/>;
+```

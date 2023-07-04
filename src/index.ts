@@ -5,4 +5,5 @@ export * from "./components/InputText";
 export * from "./components/Accordion";
 export * from "./components/ComboBox";
 export * from "./components/Avatar";
+export * from "./components/ImageCard";
 import "./global.css";
