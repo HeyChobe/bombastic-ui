@@ -39,11 +39,13 @@ import { Checkbox } from "bombastic-ui";
 
 ## Allowed Properties
 
-- **_checked_** = _boolean_
-- **_disabled_** : _boolean_
-- **_ghost_** : _boolean_
-- **_color_** : primary | secondary | ok | cancel | warning | hex-color (#000000) : _string_
-- **_onChange_** : _() => void_
+| Prop     	| Description                                              	| Type     	| Default    	| Allowed Inputs                                     	|
+|----------	|----------------------------------------------------------	|----------	|------------	|----------------------------------------------------	|
+| Checked  	| Property that tells you if a box has been checked or not 	| Boolean  	| False      	| [True, False]                                      	|
+| Disabled 	| Property that shows if a box can be used or not          	| Boolean  	| False      	| [True, False]                                      	|
+| Ghost    	| Property that changes the visibility of the component    	| Boolean  	| False      	| [True, False]                                      	|
+| Color    	| Property that changes color of the checkbox              	| string   	| "primary"  	| ["primary", "secondary", "ok", "cancel","warning"] 	|
+| OnChange 	| Function to checkbox component dispatch                  	| Function 	| () => void 	| Functions                                          	|
 
 # Title
 
