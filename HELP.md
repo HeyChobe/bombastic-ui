@@ -220,11 +220,13 @@ import { Rating } from "bombastic-ui";
 
 ## Allowed Properties
 
-- **_color_** : primary | secondary | ok | cancel | warning | hex-color (#000000) : _string_
-- **_readonly_** = _boolean_
-- **_disabled_** : _boolean_
-- **_value_** : _any_
-- **_onChange_** : _(e: any) => void_
+| Prop     	| Description                                                  	| Type     	| Default    	| Allowed Inputs                                     	|
+|----------	|--------------------------------------------------------------	|----------	|------------	|----------------------------------------------------	|
+| Color    	| Property that changes color of the text                      	| Boolean  	| "primary"  	| ["primary", "secondary", "ok", "cancel","warning"] 	|
+| readOnly 	| Property that allows to write or just read                   	| Boolean  	| False      	| [True, False]                                      	|
+| disabled 	| Property the rating is avilable to the user                  	| Boolean  	| False      	| [True, False]                                      	|
+| value    	| Property that contains the number that will appear on rating 	| any      	| 0          	| Int                                                	|
+| OnChange 	| Function that allows to make changes to rating component     	| Function 	| () => void 	| Functions                                          	|
 
 # Pagination
 
