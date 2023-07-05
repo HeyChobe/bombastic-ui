@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Checkbox.module.css";
 
 interface CheckboxProps {
@@ -24,13 +23,18 @@ export default function Checkbox({
   checked = false,
   disabled = false,
 }: CheckboxProps) {
+  const onChangeColor = (newColor: string) => {
+    document.documentElement.style.setProperty("--current-color", newColor);
+    return { color: "currentcolor" };
+  };
+
   const isCustomColor = !Object.values(bgOptions).includes(color);
 
   return (
     <input
       type="checkbox"
-      className={styles}
-      style={isCustomColor ? { "--current-color": color } : undefined}
+      className={styles.input}
+      style={isCustomColor ? onChangeColor(color) : undefined}
       data-color={color}
       data-ghost={ghost}
       checked={checked}

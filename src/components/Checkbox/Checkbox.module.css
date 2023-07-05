@@ -1,34 +1,30 @@
-body {
-  --current-color: white;
+.input[type="checkbox"][data-color="primary"] {
+  --current-color: var(--blue);
 }
-
-input[type="checkbox"][data-color="primary"] {
-  --current-color: var(--blue)
-}
-input[type="checkbox"][data-color="secondary"] {
+.input[type="checkbox"][data-color="secondary"] {
   --current-color: var(--grey2);
 }
-input[type="checkbox"][data-color="ok"] {
+.input[type="checkbox"][data-color="ok"] {
   --current-color: var(--green);
 }
-input[type="checkbox"][data-color="cancel"] {
+.input[type="checkbox"][data-color="cancel"] {
   --current-color: var(--red);
 }
-input[type="checkbox"][data-color="warning"] {
+.input[type="checkbox"][data-color="warning"] {
   --current-color: var(--yellow);
 }
 
 /* I would like the box-shadow has the same color of the previous element background-color */
-input[type="checkbox"][data-ghost="true"]::before {
-  box-shadow: inset 1em 1em black; 
+.input[type="checkbox"][data-ghost="true"]::before {
+  box-shadow: inset 1em 1em black;
 }
 
-input[type="checkbox"][data-ghost="true"] {
+.input[type="checkbox"][data-ghost="true"] {
   border: 0.15em solid transparent;
   background-color: var(--current-color);
 }
 
-input[type="checkbox"] {
+.input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-progress-appearance: none;
@@ -45,7 +41,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-input[type="checkbox"]::before {
+.input[type="checkbox"]::before {
   content: "";
   width: 0.65em;
   height: 0.65em;
@@ -56,17 +52,12 @@ input[type="checkbox"]::before {
   box-shadow: inset 1em 1em var(--current-color);
 }
 
-input[type="checkbox"]:checked::before {
+.input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 
-input[type="checkbox"]:disabled {
-  --current-color: #959495;
-  color: var(--current-color);
+.input[type="checkbox"]:disabled {
+  /* --current-color: var(--disabled); */
+  color: var(--disabled);
   cursor: not-allowed;
 }
-
-/* input[type="checkbox"]:focus {
-  outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em);
-} */
