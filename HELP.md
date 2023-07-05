@@ -284,3 +284,8 @@ export default function MyPage() {
     )
 }
 ```
+
+## Allowed Properties
+
+
+
