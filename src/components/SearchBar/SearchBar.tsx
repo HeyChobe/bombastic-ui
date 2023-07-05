@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./SearchBar.module.css";
 
 interface SearchBarProps {
@@ -22,13 +21,19 @@ export default function SearchBar({
   color = "primary",
   disabled = false,
 }: SearchBarProps) {
+  const onChangeColor = (newColor: string) => {
+    document.documentElement.style.setProperty("--current-color", newColor);
+    return { color: "currentcolor" };
+  };
+
   const isCustomColor = !Object.values(bgOptions).includes(color);
 
   return (
     <div
       className={styles.wrap}
       data-color={color}
-      style={isCustomColor ? { "--current-color": color } : undefined}>
+      style={isCustomColor ? onChangeColor(color) : undefined}
+    >
       <div className={styles.search}>
         <input
           onChange={onChange}
@@ -36,9 +41,17 @@ export default function SearchBar({
           type="text"
           required
           className={styles.searchTerm}
-          placeholder="What are you looking for?" />
-        <button onSubmit={onSubmit} disabled={disabled} className={styles.searchButton}>
-          <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.svg" alt="search" />
+          placeholder="What are you looking for?"
+        />
+        <button
+          onSubmit={onSubmit}
+          disabled={disabled}
+          className={styles.searchButton}
+        >
+          <img
+            src="https://img.uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.svg"
+            alt="search"
+          />
         </button>
       </div>
     </div>

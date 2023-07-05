@@ -1,88 +1,83 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .rate[data-color="primary"] {
-    --current-color: var(--blue)
+  --current-color: var(--blue);
 }
 
 .rate[data-color="secondary"] {
-    --current-color: var(--grey2);
+  --current-color: var(--grey2);
 }
 
 .rate[data-color="ok"] {
-    --current-color: var(--green);
+  --current-color: var(--green);
 }
 
 .rate[data-color="cancel"] {
-    --current-color: var(--red);
+  --current-color: var(--red);
 }
 
 .rate[data-color="warning"] {
-    --current-color: var(--yellow);
+  --current-color: var(--yellow);
 }
 
 .rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
+  float: left;
+  height: 46px;
+  padding: 0 10px;
 }
 
-.rate:not(:checked)>input {
-    position: absolute;
-    top: -9999px;
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
 }
 
-.rate:not(:checked)>label {
-    float: right;
-    width: 1em;
-    overflow: hidden;
-    white-space: nowrap;
-    cursor: pointer;
-    font-size: 30px;
-    color: #ccc;
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
 }
 
-.rate:not(:checked)>label:before {
-    content: '★ ';
+.rate:not(:checked) > label:before {
+  content: "★ ";
 }
 
-.rate>input:checked~label {
-    color: var(--current-color);
+.rate > input:checked ~ label {
+  color: var(--current-color);
 }
 
-.rate:not(:checked)>label:hover,
-.rate:not(:checked)>label:hover~label {
-    /* Should be a variant of the current color */
-    color: var(--current-color);
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  /* Should be a variant of the current color */
+  color: var(--current-color);
 }
 
-.rate>input:checked+label:hover,
-.rate>input:checked+label:hover~label,
-.rate>input:checked~label:hover,
-.rate>input:checked~label:hover~label,
-.rate>label:hover~input:checked~label {
-    /* Should be a variant of the current color */
-    color: var(--current-color);
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  /* Should be a variant of the current color */
+  color: var(--current-color);
 }
 
 .rate[data-disabled="true"],
-.rate[data-disabled="true"]>* {
-    opacity: 0.7;
-    cursor: default;
+.rate[data-disabled="true"] > * {
+  opacity: 0.7;
+  cursor: default;
 }
 
 .rate[data-disabled="true"] label:hover,
-.rate[data-disabled="true"] label:hover~label {
-    appearance: none;
-    color: #ccc;
-    cursor: default;
+.rate[data-disabled="true"] label:hover ~ label {
+  appearance: none;
+  color: #ccc;
+  cursor: default;
 }
 
 .rate[data-readonly="true"] label:hover,
-.rate[data-readonly="true"] label:hover~label {
-    appearance: none;
-    color: #ccc;
-    cursor: default;
+.rate[data-readonly="true"] label:hover ~ label {
+  appearance: none;
+  color: #ccc;
+  cursor: default;
 }
