@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "../components/Button";
+import React from "react";
 
 const meta: Meta<typeof Button> = {
   title: "Button",
@@ -55,8 +56,5 @@ export const Custom: Story = {
   args: {
     bg: "primary",
     label: "Custom Button",
-    onClick: () => {
-      console.log("click");
-    },
   },
 };

@@ -1,0 +1,71 @@
+.title {
+  width: 100%;
+  height: auto;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.h1 {
+  font-size: 2.8rem;
+}
+.h2 {
+  font-size: 2.6rem;
+}
+.h3 {
+  font-size: 2.4rem;
+}
+.h4 {
+  font-size: 2.2rem;
+}
+.h5 {
+  font-size: 2rem;
+}
+.h6 {
+  font-size: 1.8rem;
+}
+
+/* Italic */
+.title[data-italic="true"] {
+  font-style: italic;
+}
+
+/* Underline */
+.title[data-underlined="true"] {
+  text-decoration-line: underline;
+}
+
+/* Strong */
+.title[data-strong="false"] {
+  font-weight: 300;
+}
+
+/* Color */
+.title[data-color="primary"] {
+  color: var(--black);
+}
+.title[data-color="secondary"] {
+  color: var(--grey2);
+}
+.title[data-color="ok"] {
+  color: var(--green);
+}
+.title[data-color="cancel"] {
+  color: var(--red);
+}
+.title[data-color="warning"] {
+  color: var(--yellow);
+}
+
+/* Mode */
+.title[data-mode="left"] {
+  text-align: left;
+}
+.title[data-mode="right"] {
+  text-align: right;
+}
+.title[data-mode="center"] {
+  text-align: center;
+}
+.title[data-mode="justify"] {
+  text-align: justify;
+}

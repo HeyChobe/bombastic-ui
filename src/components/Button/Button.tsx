@@ -8,9 +8,9 @@ const options = {
   WARNING: "warning",
 };
 
-export interface Props {
+interface ButtonProps {
   label: string;
-  onClick: () => void;
+  onClick: (event: any) => void;
   bg?: string;
   ghost?: boolean;
   small?: boolean;
@@ -18,13 +18,14 @@ export interface Props {
 }
 
 export default function Button({
-  label,
-  onClick,
+  label = "Button",
+  onClick = () =>
+    console.warn("No onClickHandler provided for Button component"),
   bg = "primary",
   ghost = false,
   small = false,
   disabled = false,
-}: Props) {
+}: ButtonProps) {
   const isCustomColor = !Object.values(options).includes(bg);
 
   const buttonStyle = {

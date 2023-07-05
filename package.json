@@ -1,6 +1,6 @@
 {
   "name": "bombastic-ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A powerful and flexible framework for building beautiful and responsive web applications with user interface styled components",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -12,11 +12,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build-lib": "rollup -c"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HeyChobe/bombastic-ui.git"
+  },
+  "homepage": {
+    "url": "https://bombastic-ui-documentation.vercel.app/"
   },
   "author": {
     "name": "Bombastic Dev",
