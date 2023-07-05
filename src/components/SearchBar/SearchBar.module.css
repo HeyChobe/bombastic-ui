@@ -1,5 +1,5 @@
 .wrap[data-color="primary"] {
-  --current-color: var(--blue)
+  --current-color: var(--blue);
 }
 .wrap[data-color="secondary"] {
   --current-color: var(--grey2);
@@ -28,7 +28,7 @@
   height: 20px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: #9DBFAF;
+  color: #9dbfaf;
 }
 
 .searchTerm:focus {
@@ -48,16 +48,12 @@
   padding: 4.5px;
 }
 
-.searchButton img{
+.searchButton img {
   max-width: 100%;
   max-height: 100%;
   filter: invert(100%);
 }
 
 .wrap {
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 300px;
 }
