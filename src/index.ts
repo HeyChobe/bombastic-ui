@@ -8,4 +8,7 @@ export * from "./components/Avatar";
 export * from "./components/ImageCard";
 export * from "./components/ProgressBar";
 export * from "./components/Pagination";
+export * from "./components/Checkbox";
+export * from "./components/Rating";
+export * from "./components/SearchBar";
 import "./global.css";
