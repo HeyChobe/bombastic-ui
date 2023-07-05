@@ -21,9 +21,6 @@
   "homepage": {
     "url": "https://bombastic-ui-documentation.vercel.app/"
   },
-  "bugs": {
-    "url": "https://github.com/HeyChobe/bombastic-ui/issues"
-  },
   "author": {
     "name": "Bombastic Dev",
     "contributors": [
