@@ -31,7 +31,7 @@ import { Checkbox } from "bombastic-ui";
   disabled={false}
   ghost={false}
   color="primary"
-  onClick={() => setValueState(!valueState)}
+  onChange={() => setValueState(!valueState)}
 />;
 ```
 
@@ -193,7 +193,7 @@ import { Rating } from "bombastic-ui";
   disabled={false}
   readonly={false}
   value= {valueState}
-  onClick={(e) => setValueState(e.value)}
+  onChange={(e) => setValueState(e.value)}
 />;
 ```
 
@@ -204,6 +204,26 @@ import { Rating } from "bombastic-ui";
 - **_disabled_** : _boolean_
 - **_value_** : _any_
 - **_onChange_** : _(e: any) => void_
+
+# SearchBar
+
+```javascript
+import { SearchBar } from "bombastic-ui";
+
+<SearchBar
+  color="primary"
+  disabled={false}
+  onChange={(e) => setValueState(e.value)}
+  onSubmit={(e) => submit(e.value)}
+/>;
+```
+
+## Allowed Properties
+
+- **_color_** : primary | secondary | ok | cancel | warning | hex-color (#000000) : _string_
+- **_disabled_** : _boolean_
+- **_onChange_** : _(e: any) => void_
+- **_onSubmit_** : _(e: any) => void_
 
 # Pagination
 
