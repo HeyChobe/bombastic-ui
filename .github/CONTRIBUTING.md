@@ -52,11 +52,11 @@ If you prefer to contribute to the codebase, follow these steps to properly set 
 
 4. Make the necessary changes in your local environment, adhering to the project's coding standards and guidelines.
 
-5. Stage the changes and commit them with a descriptive commit message using[gitemoji](https://gitmoji.dev/):
+5. Stage the changes and commit them with a descriptive commit message using [gitemoji](https://gitmoji.dev/):
 
-```bash
- git commit -m ":sparkles: Your commit message"
-```
+   ```bash
+    git commit -m ":sparkles: Your commit message"
+   ```
 
 6. Locally merge (or rebase) the upstream development branch into your topic branch:
 
