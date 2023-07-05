@@ -1,0 +1,10 @@
+.image {
+  border-radius: 50%;
+}
+
+.letter {
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
