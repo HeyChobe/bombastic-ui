@@ -14,12 +14,14 @@ import { Button } from "bombastic-ui";
 
 ## Allowed Properties
 
-- **_bg_** = primary | secondary | ok | cancel | warning | hex-color (#000000) : _string_
-- **_label_** : _string_
-- **_onClick_** : _() => void_
-- **_ghost_** : _boolean_
-- **_disabled_** : _boolean_
-- **_small_** : _boolean_
+| Prop     	| Description                                               	| Type     	| Default                           	| Allowed Inputs                                      	|
+|----------	|-----------------------------------------------------------	|----------	|-----------------------------------	|-----------------------------------------------------	|
+| bg       	| Property that changes button background color             	| string   	| "primary"                         	| ["primary", "secondary", "ok", "cancel", "warning"] 	|
+| label    	| String content of the  Button component                   	| string   	| "button"                          	| any string                                          	|
+| onClick  	| Propert that gives the button an action                   	| function 	| console.warn("No event provided") 	| functions                                           	|
+| ghost    	| Property that adjust the visibility of the Button element 	| boolean  	| false                             	| [true, false]                                       	|
+| disabled 	| Property that shows if Button component can be used       	| boolean  	| false                             	| [true, false]                                       	|
+| small    	| Property that adjust the size of the Button               	| boolean  	| false                             	| [true, false]                                       	|
 
 # Checkbox
 
@@ -37,11 +39,13 @@ import { Checkbox } from "bombastic-ui";
 
 ## Allowed Properties
 
-- **_checked_** = _boolean_
-- **_disabled_** : _boolean_
-- **_ghost_** : _boolean_
-- **_color_** : primary | secondary | ok | cancel | warning | hex-color (#000000) : _string_
-- **_onChange_** : _() => void_
+| Prop     	| Description                                              	| Type     	| Default    	| Allowed Inputs                                     	|
+|----------	|----------------------------------------------------------	|----------	|------------	|----------------------------------------------------	|
+| Checked  	| Property that tells you if a box has been checked or not 	| Boolean  	| False      	| [True, False]                                      	|
+| Disabled 	| Property that shows if a box can be used or not          	| Boolean  	| False      	| [True, False]                                      	|
+| Ghost    	| Property that changes the visibility of the component    	| Boolean  	| False      	| [True, False]                                      	|
+| Color    	| Property that changes color of the checkbox              	| string   	| "primary"  	| ["primary", "secondary", "ok", "cancel","warning"] 	|
+| OnChange 	| Function to checkbox component dispatch                  	| Function 	| () => void 	| Functions                                          	|
 
 # Title
 
@@ -84,6 +88,16 @@ export default function MyPage() {
   );
 }
 ```
+## Allowed Properties
+
+| Prop        	| Description                                                	| Type     	| Default          	| Allowed Inputs                                      	|
+|-------------	|------------------------------------------------------------	|----------	|------------------	|-----------------------------------------------------	|
+| placeholder 	| Property that holds a text to show before typing something 	| String   	| "Type something" 	| Any strings                                         	|
+| onChange    	| Event handler for onChange actions                         	| Function 	| void             	| Functions                                           	|
+| value       	| Property that contains the text that will go in the input  	| any      	|        ""        	| Any                                                 	|
+| color       	| Property that changes the color of text                    	| string   	| "primary"        	| ["primary", "secondary", "ok", "cancel", "warning"] 	|
+| disabled    	| Property that shows if component can be shown              	| boolean  	| "false"          	| ["true","false"]                                    	|
+| labelColor  	| Prperty that changes text input text color                 	| string   	| "dark"           	| ["dark", "light"]                                   	|
 
 # Accordion
 
@@ -98,6 +112,13 @@ import { Accordion } from "bombastic-ui";
   bg="light"
 />;
 ```
+## Allowed Properties
+
+| Prop        	| Description                                      	| Type   	| Default                               	| Allowed Inputs   	|
+|-------------	|--------------------------------------------------	|--------	|---------------------------------------	|------------------	|
+| Title       	| Property that contains the title of the element  	| String 	| "Title"                               	| Any strings      	|
+| Description 	| Property contains the description of the element 	| String 	| "This is an example of the paragraph" 	| Any strings      	|
+| bg          	| Property that changes accordion background color 	| String 	| "Dark"                                	| ["Light","Dark"] 	|
 
 # ComboBox
 
@@ -112,7 +133,7 @@ const options = [
   { label: "tacos", value: "tacos" },
 ];
 
-export default function MyPage(){
+export default function MyPage()
     const [comboBoxValue, setComboBoxValue] = useState("")
 
     return(
@@ -174,6 +195,17 @@ import { ImageCard } from "bombastic-ui";
   theme="light"
 />;
 ```
+## Allowed Properties
+
+| Prop          	| Description                                            	| Type   	| Default                   	| Allowed Inputs   	|
+|---------------	|--------------------------------------------------------	|--------	|---------------------------	|------------------	|
+| Title         	| Property that contains the Title of the imageCard      	| string 	| "Title"                   	| Any string       	|
+| text          	| Property that contains text to describe imageCard      	| string 	| "Example of text content" 	| Any string       	|
+| titleButton   	| Property that contains text for the button             	| string 	| "Go Somewhere"            	| Any string       	|
+| src           	| Property that contains an image link                   	| string 	| ""                        	| Any string       	|
+| alt           	| Contains an alternative description for the imageCard  	| string 	| ""                        	| Any string       	|
+| theme         	| it sets how is the imageCard will look with our themes 	| string 	| "dark"                    	| ["dark","light"] 	|
+| bgButtonColor 	| Property that changes the color of the button          	| string 	| ""                        	| RGB colors       	|
 
 # ProgressBar
 
@@ -182,6 +214,12 @@ import { ProgressBar } from "bombastic-ui";
 
 <ProgressBar width="76%" bgColor="green" />;
 ```
+## Allowed Properties
+
+| Prop          	| Description                                            	| Type   	| Default                   	| Allowed Inputs   	|
+|---------------	|--------------------------------------------------------	|--------	|---------------------------	|------------------	|
+| width         	| Property that sets the width of the progress bar      	| int    	| "Title"                   	| [1-100]      	|
+| bgColor        	| Property that changes the color of the bar            	| string 	| ""                        	| RGB colors       	|
 
 # Rating
 
@@ -199,11 +237,13 @@ import { Rating } from "bombastic-ui";
 
 ## Allowed Properties
 
-- **_color_** : primary | secondary | ok | cancel | warning | hex-color (#000000) : _string_
-- **_readonly_** = _boolean_
-- **_disabled_** : _boolean_
-- **_value_** : _any_
-- **_onChange_** : _(e: any) => void_
+| Prop     	| Description                                                  	| Type     	| Default    	| Allowed Inputs                                     	|
+|----------	|--------------------------------------------------------------	|----------	|------------	|----------------------------------------------------	|
+| Color    	| Property that changes color of the text                      	| Boolean  	| "primary"  	| ["primary", "secondary", "ok", "cancel","warning"] 	|
+| readOnly 	| Property that allows to write or just read                   	| Boolean  	| False      	| [True, False]                                      	|
+| disabled 	| Property the rating is avilable to the user                  	| Boolean  	| False      	| [True, False]                                      	|
+| value    	| Property that contains the number that will appear on rating 	| any      	| 0          	| Int                                                	|
+| OnChange 	| Function that allows to make changes to rating component     	| Function 	| () => void 	| Functions                                          	|
 
 # Pagination
 
