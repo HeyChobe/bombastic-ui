@@ -260,10 +260,12 @@ import { SearchBar } from "bombastic-ui";
 
 ## Allowed Properties
 
-- **_color_** : primary | secondary | ok | cancel | warning | hex-color (#000000) : _string_
-- **_disabled_** : _boolean_
-- **_onChange_** : _(e: any) => void_
-- **_onSubmit_** : _(e: any) => void_
+| Prop     	| Description                                                                   	| Type     	| Default          	| Allowed Inputs                                      	|
+|----------	|-------------------------------------------------------------------------------	|----------	|------------------	|-----------------------------------------------------	|
+| Color    	| Property that changes the color of the Search Bar component                   	| string   	| "primary"        	| ["primary", "secondary", "ok", "cancel", "warning"] 	|
+| Disabled 	| Property that disables the searchbar so user cant search                      	| Boolean  	| false            	| [true, false]                                       	|
+| onChange 	| Function that handles the response of what the user searched when its typing  	| Function 	| (e: any) => void 	| Function                                            	|
+| onSubmit 	| Function that handles the response of what the user searched when its entered 	| Function 	| (e: any) => void 	| Function                                            	|
 
 # Pagination
 
