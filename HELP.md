@@ -287,5 +287,13 @@ export default function MyPage() {
 
 ## Allowed Properties
 
+| Prop               	| Description                                                                     	| Type                  	| Default 	| Allowed Inputs 	|
+|--------------------	|---------------------------------------------------------------------------------	|-----------------------	|---------	|----------------	|
+| Total              	| Property that contains how many options will there be in the pagination         	| number                	| 7       	| [1-100]        	|
+| onChange           	| event handler of pagination elements                                            	| dispatch \| undefined 	| -       	| action objects 	|
+| page               	| Property that contains in which page are you on                                 	| number \| undefined   	| 1       	| [1-100]        	|
+| bgColor            	| Property that contains which color will the background will be                  	| string                	| ""      	| RGB colors     	|
+| currentNumberColor 	| Property that has which color is going to have the current number in pagination 	| string                	| ""      	| RGB colors     	|
+| numberColor        	| Property that contains the color of the number shown in the pagination          	| string                	| ""      	| RGB colors     	|
 
-
+/
