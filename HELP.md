@@ -296,4 +296,4 @@ export default function MyPage() {
 | currentNumberColor 	| Property that has which color is going to have the current number in pagination 	| string                	| ""      	| RGB colors     	|
 | numberColor        	| Property that contains the color of the number shown in the pagination          	| string                	| ""      	| RGB colors     	|
 
-/
+
