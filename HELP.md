@@ -195,6 +195,17 @@ import { ImageCard } from "bombastic-ui";
   theme="light"
 />;
 ```
+## Allowed Properties
+
+| Prop          	| Description                                            	| Type   	| Default                   	| Allowed Inputs   	|
+|---------------	|--------------------------------------------------------	|--------	|---------------------------	|------------------	|
+| Title         	| Property that contains the Title of the imageCard      	| string 	| "Title"                   	| Any string       	|
+| text          	| Property that contains text to describe imageCard      	| string 	| "Example of text content" 	| Any string       	|
+| titleButton   	| Property that contains text for the button             	| string 	| "Go Somewhere"            	| Any string       	|
+| src           	| Property that contains an image link                   	| string 	| ""                        	| Any string       	|
+| alt           	| Contains an alternative description for the imageCard  	| string 	| ""                        	| Any string       	|
+| theme         	| it sets how is the imageCard will look with our themes 	| string 	| "dark"                    	| ["dark","light"] 	|
+| bgButtonColor 	| Property that changes the color of the button          	| string 	| ""                        	| RGB colors       	|
 
 # ProgressBar
 
@@ -203,6 +214,12 @@ import { ProgressBar } from "bombastic-ui";
 
 <ProgressBar width="76%" bgColor="green" />;
 ```
+## Allowed Properties
+
+| Prop          	| Description                                            	| Type   	| Default                   	| Allowed Inputs   	|
+|---------------	|--------------------------------------------------------	|--------	|---------------------------	|------------------	|
+| width         	| Property that sets the width of the progress bar      	| int    	| "Title"                   	| [1-100]      	|
+| bgColor        	| Property that changes the color of the bar            	| string 	| ""                        	| RGB colors       	|
 
 # Rating
 
