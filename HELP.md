@@ -110,6 +110,13 @@ import { Accordion } from "bombastic-ui";
   bg="light"
 />;
 ```
+## Allowed Properties
+
+| Prop        	| Description                                      	| Type   	| Default                               	| Allowed Inputs   	|
+|-------------	|--------------------------------------------------	|--------	|---------------------------------------	|------------------	|
+| Title       	| Property that contains the title of the element  	| String 	| "Title"                               	| Any strings      	|
+| Description 	| Property contains the description of the element 	| String 	| "This is an example of the paragraph" 	| Any strings      	|
+| bg          	| Property that changes accordion background color 	| String 	| "Dark"                                	| ["Light","Dark"] 	|
 
 # ComboBox
 
